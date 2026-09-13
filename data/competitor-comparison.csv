@@ -1,0 +1,15 @@
+﻿# Source: live web-page audit performed 2026-09-13, keyword "green screen remover"
+# (course "AI出海新手实战" Step 7). "not stated" = the vendor's page did not publish that field.
+# This CSV is a sub-set (6 of the 10 audited tools) whose URLs were re-confirmed when
+# this repo was assembled. Aggregate gaps across all 10 audited tools:
+#   login required      -> not stated on 5/10 pages
+#   batch processing    -> not stated on 7/10 pages (only sleek.design, remove.bg, evoto.ai stated it)
+#   per-file limit      -> not stated on 4/10 pages
+#   quality / precision -> not stated on 1/10 pages (only twittershots)
+tool,url,batch_processing,notes
+sleek.design,https://sleek.design/,yes,
+cutout.pro/remove-video-background,https://cutout.pro/remove-video-background,not stated,replaced a 404 picsart.com result in the audit
+remove.bg,https://remove.bg/,yes,photographers sub-page returned 404 in the audit
+evoto.ai/remove-green-screen,https://evoto.ai/features/remove-green-screen,yes,replaced a 404 aatbio.com result in the audit
+twittershots,https://twittershots.com/,not stated,only tool with quality/precision "not stated"
+klingmotion.com/kling-motion,https://klingmotion.com/kling-motion,not stated,duplicate content of the cutout.pro entry in the audit

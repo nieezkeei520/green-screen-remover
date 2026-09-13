@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Screen Remover — free, runs in your browser</title>
+<meta name="description" content="Free online green screen remover. Remove green screen from images and videos right in your browser — no upload, no signup, unlimited. Export transparent PNG, transparent WebM, or a PNG-sequence zip.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://greenscreencut.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Green Screen Remover — free, runs in your browser">
+<meta property="og:description" content="Remove green screen from images and videos in your browser. No upload, no signup, unlimited. Export transparent PNG, WebM, or PNG-sequence zip.">
+<meta property="og:url" content="https://greenscreencut.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Green Screen Remover</h1>
+  <p class="tag">No signup · Unlimited uses · Everything runs in your browser — your files never leave this device.</p>
+</header>
+
+<main>
+  <div class="tabs">
+    <button id="tabImage" class="tab active" type="button">Image</button>
+    <button id="tabVideo" class="tab" type="button">Video</button>
+  </div>
+
+  <section class="workspace">
+    <div class="left">
+      <div id="drop" class="drop">
+        <input type="file" id="file" accept="image/*,video/*" hidden>
+        <p>Drop a green-screen image or video here, or
+          <button id="browse" type="button" class="link">browse</button>
+        </p>
+        <p class="hint" id="fileName"></p>
+      </div>
+
+      <div class="controls">
+        <label class="ctl">Key color
+          <span class="row">
+            <input type="color" id="keyColor" value="#00ff00">
+            <button id="presetGreen" type="button" class="mini">Green</button>
+            <button id="presetBlue" type="button" class="mini">Blue</button>
+          </span>
+        </label>
+
+        <label class="ctl">Similarity threshold <span class="val" id="thVal"></span>
+          <input type="range" id="threshold" min="0" max="100" value="18">
+        </label>
+
+        <label class="ctl">Edge smoothing <span class="val" id="smVal"></span>
+          <input type="range" id="smooth" min="0" max="20" value="4">
+        </label>
+
+        <label class="ctl">Edge shrink <span class="val" id="shVal"></span>
+          <input type="range" id="shrink" min="0" max="20" value="2">
+        </label>
+
+        <label class="ctl hidden" id="fmtRow">Export format
+          <select id="format">
+            <option value="pngseq">PNG sequence (.zip)</option>
+            <option value="webm">Transparent WebM</option>
+          </select>
+        </label>
+
+        <button id="process" type="button" class="primary" disabled>Process</button>
+        <button id="download" type="button" class="primary hidden">Download result</button>
+        <p class="status" id="status"></p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="canvas-wrap">
+        <canvas id="preview"></canvas>
+      </div>
+      <p class="note">Tip: click anywhere on the preview to sample that color as the key color.</p>
+    </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footnav">
+      <a href="index.html">Tool</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy</a>
+      <a href="contact">Contact</a>
+    </nav>
+    <p class="copy">&copy; Greenscreencut &middot; greenscreencut.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
