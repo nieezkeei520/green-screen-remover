@@ -10,8 +10,7 @@ own browser. No uploads, no server, no account, no file size limits.
 ## What it does
 
 - Remove a green or blue screen from an **image** → transparent PNG
-- Remove a green or blue screen from a **video** → transparent MOV (QuickTime Animation) / MKV (FFV1) / APNG
-  (VP8/VP9 with an alpha channel) or a zipped PNG-sequence
+- Remove a green or blue screen from a **video** → transparent WebM (VP8/VP9 with an alpha channel) or a zipped PNG-sequence
 - Adjustable key color (eyedropper + green/blue presets), similarity
   threshold, edge smoothing, and edge shrink
 
