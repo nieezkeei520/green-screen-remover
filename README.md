@@ -10,7 +10,7 @@ own browser. No uploads, no server, no account, no file size limits.
 ## What it does
 
 - Remove a green or blue screen from an **image** → transparent PNG
-- Remove a green or blue screen from a **video** → a zipped PNG sequence that keeps the alpha
+- Remove a green or blue screen from a **video** → transparent WebM (VP8/VP9 with an alpha channel) or a zipped PNG-sequence
 - Adjustable key color (eyedropper + green/blue presets), similarity
   threshold, edge smoothing, and edge shrink
 
@@ -39,6 +39,8 @@ for every slider.
 The engine computes a per-pixel alpha mask but does **not** desaturate
 semi-transparent pixels, so a faint green fringe can remain on soft edges.
 This is documented, not hidden.
+
+A transparent WebM keeps its alpha channel in a browser and in any WebM/VP9-capable player — verified by rendering the exported file on a magenta background, where the background shows through.
 
 ## License
 
