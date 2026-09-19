@@ -40,7 +40,7 @@ The engine computes a per-pixel alpha mask but does **not** desaturate
 semi-transparent pixels, so a faint green fringe can remain on soft edges.
 This is documented, not hidden.
 
-A transparent WebM keeps its alpha channel in a browser and in any WebM/VP9-capable player — verified by rendering the exported file on a magenta background, where the background shows through.
+A transparent WebM keeps its alpha channel in a browser and in any WebM/VP9-capable player — verified by rendering the exported file on a magenta background, where the background shows through. One caveat we measured: command-line decoders such as ffmpeg drop the alpha by default — decoding our export with `ffmpeg -i file.webm frame.png` produced an RGB frame with no alpha channel and a black background. You can keep it by forcing `-pix_fmt yuva420p`, but for reliable transparency, play the file in a browser or WebM/VP9-capable player.
 
 ## License
 
